@@ -74,6 +74,7 @@ export function SignUpForm() {
     try {
       await createContact(data.username, data.email, data.phone, data.message);
       toast.success("You have successfully signed up for our newsletter!");
+      form.reset();
     } catch {
       toast.error("Failed to submit form");
     }
